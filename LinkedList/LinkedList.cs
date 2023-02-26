@@ -27,7 +27,24 @@ namespace LinkedList
                 tempNode.Next = node;
             }
             Console.WriteLine("{0} inserted into linked list ", node.data);
-       
+
+        }
+        public void AddFirst(int data)
+        {
+            Node newNode = new Node(data);
+            newNode.Next = headNode;
+            headNode = newNode;
+        }
+        public void AddLast(int data)
+        {
+            Node newNode = new Node(data);
+            if (headNode == null)
+                tailNode = headNode = newNode;
+            else
+            {
+                tailNode.Next = newNode;
+                tailNode = newNode;
+            }
         }
 
     }
