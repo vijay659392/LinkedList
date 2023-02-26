@@ -46,6 +46,35 @@ namespace LinkedList
                 tailNode = newNode;
             }
         }
+        public void ReversOrder(int data)
+        {
+            Node newNode = new Node(data);
 
+            if (this.headNode == null)
+                this.headNode = newNode;
+            else
+            {
+                Node tempNode = this.headNode;
+                headNode = newNode;
+                headNode.Next = tempNode;
+            }
+            Console.WriteLine(newNode.data + " is inserted into the linked list");
+        }
+        public void Display()
+        {
+            Node temp = this.headNode;
+            if (temp == null)
+            {
+                Console.WriteLine("Linked list is empty");
+            }
+            Console.WriteLine("Linked list is: ");
+            while (temp != null)
+            {
+                Console.WriteLine(temp.data + " ");
+                temp = temp.Next;
+            }
+
+
+        }
     }
 }
