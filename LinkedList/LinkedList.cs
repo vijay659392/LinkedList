@@ -120,6 +120,23 @@ namespace LinkedList
             }
             Display();
         }
+
+        public void Size()
+        {
+            Node temp = headNode;
+            int count = 0;
+            if (temp == null)
+            {
+                Console.WriteLine("Lined List is empty");
+            }
+            while(temp != null)
+            {
+                Console.WriteLine(temp.data + "  ");
+                temp = temp.Next;
+                count++;
+            }
+            Console.WriteLine(count);
+        }
         public void Display()
         {
             Node temp = this.headNode;

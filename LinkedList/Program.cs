@@ -21,6 +21,7 @@ namespace LinkedList
                 Console.WriteLine("4.Remove the last Node");
                 Console.WriteLine("5.Display");
                 Console.WriteLine("6.searchvalue");
+                Console.WriteLine("7.Size");
                 Console.WriteLine("Enter The Option:");
                 int option = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("");
@@ -59,9 +60,19 @@ namespace LinkedList
                     case 6:
                         linkedList.Add(56);
                         linkedList.Add(30);
-                        linkedList.Add(70);
+                        linkedList.Add(70);                      
                         break;
                     case 7:
+                        linkedList.Add(56);
+                        linkedList.Add(30);
+                        linkedList.Add(70);
+                        linkedList.Add(40);
+                        linkedList.Add(20);
+                        linkedList.Add(10);
+                        linkedList.Display();
+                        linkedList.Size();
+                        break;
+                    case 8:
                          linkedList.Display();           
                         break;
                     default:
