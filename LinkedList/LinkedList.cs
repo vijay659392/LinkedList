@@ -60,6 +60,17 @@ namespace LinkedList
             }
             Console.WriteLine(newNode.data + " is inserted into the linked list");
         }
+
+        public void RemoveFirstNode()
+        {
+            if (headNode == null)
+            {
+                Console.WriteLine("linked list is empty");
+            }
+            this.headNode = this.headNode.Next;
+            Console.WriteLine("the first element is deleted");
+        }
+
         public void Display()
         {
             Node temp = this.headNode;
