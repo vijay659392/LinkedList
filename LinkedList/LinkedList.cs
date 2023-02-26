@@ -92,6 +92,34 @@ namespace LinkedList
                 Console.WriteLine("the last element is deleted");
             }
         }
+
+        public void SearchValue(int value)
+        {
+            bool doesExists = false;
+            if (headNode != null)
+            {
+                int count = 0;
+                Node temp = headNode;
+                while (temp != null)
+                {
+                    if (temp.data == value)
+                    {
+                        doesExists = true;
+                        count++;
+                    }
+                    temp = temp.Next;
+                }
+                if (doesExists)
+                {
+                    Console.WriteLine($">>>>>(value) exists {count} times");
+                }
+                else
+                {
+                    Console.WriteLine($">>>>>{value} is not present in list");
+                }
+            }
+            Display();
+        }
         public void Display()
         {
             Node temp = this.headNode;
