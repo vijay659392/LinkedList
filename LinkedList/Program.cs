@@ -50,6 +50,12 @@ namespace LinkedList
                         linkedList.RemoveFirstNode();
                         break;
                     case 5:
+                        linkedList.Add(56);
+                        linkedList.Add(30);
+                        linkedList.Add(70);
+                        linkedList.RemoveLastNode();
+                        break;
+                    case 6:
                          linkedList.Display();           
                         break;
                     default:
